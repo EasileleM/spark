@@ -14,6 +14,6 @@ student_data = spark.read \
     .repartition(1) \
     .write \
     .option("header", "true") \
-    .csv("/tasks/brutef               orce/result")
+    .csv("/tasks/bruteforce/result")
 
 spark.stop()
