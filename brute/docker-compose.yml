@@ -1,0 +1,44 @@
+version: "3.9"
+services:
+  rabbitmq:
+    image: "bitnami/rabbitmq:latest"
+    environment:
+      - RABBITMQ_DEFAULT_USER=user
+      - RABBITMQ_DEFAULT_PASS=user
+  master:
+    build: ./master
+    volumes:
+      - ./celery:/celery
+    depends_on: ["rabbitmq"]
+    stdin_open: true
+    tty: true  
+  worker1:
+    build: ./worker
+    volumes:
+      - ./celery:/celery
+    depends_on: ["rabbitmq"]
+  worker2:
+    build: ./worker
+    volumes:
+      - ./celery:/celery
+    depends_on: ["rabbitmq"]
+  worker3:
+    build: ./worker
+    volumes:
+      - ./celery:/celery
+    depends_on: ["rabbitmq"]
+  worker4:
+    build: ./worker
+    volumes:
+      - ./celery:/celery
+    depends_on: ["rabbitmq"]
+  worker5:
+    build: ./worker
+    volumes:
+      - ./celery:/celery
+    depends_on: ["rabbitmq"]
+  worker6:
+    build: ./worker
+    volumes:
+      - ./celery:/celery
+    depends_on: ["rabbitmq"]

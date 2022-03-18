@@ -3,30 +3,30 @@ services:
   spark-master:
     image: "sdesilva26/spark_master:0.0.2"
     volumes:
-      - ./tasks:/tasks
+      - .:/tasks
     ports:
       - "8080:8080"
   spark-worker1:
     image: "sdesilva26/spark_worker:0.0.2"
     volumes:
-      - ./tasks:/tasks
+      - .:/tasks
   spark-worker2:
     image: "sdesilva26/spark_worker:0.0.2"
     volumes:
-      - ./tasks:/tasks
+      - .:/tasks
   spark-worker3:
     image: "sdesilva26/spark_worker:0.0.2"
     volumes:
-      - ./tasks:/tasks
+      - .:/tasks
   spark-worker4:
     image: "sdesilva26/spark_worker:0.0.2"
     volumes:
-      - ./tasks:/tasks
+      - ./:/tasks
   spark-worker5:
     image: "sdesilva26/spark_worker:0.0.2"
     volumes:
-      - ./tasks:/tasks
+      - .:/tasks
   spark-worker6:
     image: "sdesilva26/spark_worker:0.0.2"
     volumes:
-      - ./tasks:/tasks
+      - .:/tasks
